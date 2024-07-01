@@ -5,7 +5,6 @@ import (
 	"fmt"
 )
 
-// 6:16:48
 func main() {
 	for c := range Alphabet {
 		fmt.Printf("%c", c)

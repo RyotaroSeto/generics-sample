@@ -5,15 +5,20 @@ import (
 	"fmt"
 )
 
+// 6:16:48
 func main() {
 	for c := range Alphabet {
-		fmt.Println("%c", c)
+		fmt.Printf("%c", c)
 		if c == 'c' {
 			break
 		}
 	}
 }
 
-func Alphabet(yield func(int) bool) {
-	fmt.Println("in seq1")
+func Alphabet(yield func(rune) bool) {
+	for c := 'A'; c <= 'Z'; c++ {
+		if !yield(c) {
+			break
+		}
+	}
 }
